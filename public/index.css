@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  background-image: url(img/index.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 10rem;
+  margin-top: 3rem;
+  font-family: 'Dancing Script', cursive;
+}
+
+h2 {
+ font-size: 4rem;
+ font-weight: bolder;
+ font-family: 'Barlow', sans-serif;
+ margin-top: 10rem;
+}
+
+form {
+  font-size: 4rem;
+  font-family: 'Barlow', sans-serif;
+}
+
+table {
+  font-family: 'Barlow', sans-serif;
+  font-size: 4rem;
+  margin-top: 5rem;
+  margin-left: 45rem;
+  margin-right: -40rem;
+  float: left;
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <title>Barista</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="profile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section>
+  <span style="display:none" class="email"><%= user.local.email %></span>
+  <div class="page-header text-center">
+    <h1>All Orders</h1>
+    <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+  </div>
+  <section class="pending">
+    <h3>Pending</h3>
+      <ul class="orders">
+          <% for(var i=0; i < orders.length; i++) {%>
+          <% if(orders[i].completed === undefined){ %>
+          <li class="orderListItem">
+            <span><%= orders[i].customer %></span>
+            <span><%= orders[i].order %></span>
+          </li>
+          <% } %>
+          <% } %>
+      </ul>
+  </section>
+  <section class="completeContain">
+    <h3>Completed</h3>
+    <ul class="completed">
+        <% for(var i=0; i< orders.length; i++) {%>
+        <% if (orders[i].completed === true && user.local.email == orders[i].name) { %>
+        <li>
+          <span><%= orders[i].name %></span>
+          <span><%= orders[i].customer %></span>
+          <span><%= orders[i].order %></span>
+        </li>
+          <% } %>
+          <% } %>
+    </ul>
+  </section>
+  <script src="main.js"></script>
+</body>
+</html>
